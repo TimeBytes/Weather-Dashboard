@@ -16,65 +16,25 @@
       <section id="city-search">
         <h2>Search for a City</h2>
         <form>
-          <input type="text" placeholder="City Name" />
-          <input type="text" placeholder="State Code" />
-          <input type="text" placeholder="Country Code" />
-          <button type="submit">Search</button>
+          <input id="city-input" type="text" placeholder="City Name" />
+          <input id="state-input" type="text" placeholder="State Code" />
+          <input id="country-input" type="text" placeholder="Country Code" />
+          <button id="city-search-btn" type="submit">Search</button>
         </form>
       </section>
       <section id="search-history-container">
         <ul id="search-history">
-          <li>History1</li>
+          <!-- <li>History1</li>
           <li>History2</li>
-          <li>History3</li>
+          <li>History3</li> -->
         </ul>
       </section>
       <section id="current-day-container">
-        <div id="current-day">
-          <h3>Atlanta (9/13/2022)</h3>
-          <p>Temp: 25°C</p>
-          <p>Wind: 3.94MPH</p>
-          <p>Humidity: 63%</p>
-        </div>
+        <div id="current-day"></div>
       </section>
       <section id="five-day-forecast-container">
         <div id="five-day-forecast">
           <h3 id="forecast-title">5-Day Forecast:</h3>
-          <div>
-            <h4>9/14/2022</h4>
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
-            <p>Temp: 25°C</p>
-            <p>Wind: 3.94MPH</p>
-            <p>Humidity: 63%</p>
-          </div>
-          <div>
-            <h4>9/14/2022</h4>
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
-            <p>Temp: 25°C</p>
-            <p>Wind: 3.94MPH</p>
-            <p>Humidity: 63%</p>
-          </div>
-          <div>
-            <h4>9/14/2022</h4>
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
-            <p>Temp: 25°C</p>
-            <p>Wind: 3.94MPH</p>
-            <p>Humidity: 63%</p>
-          </div>
-          <div>
-            <h4>9/14/2022</h4>
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
-            <p>Temp: 25°C</p>
-            <p>Wind: 3.94MPH</p>
-            <p>Humidity: 63%</p>
-          </div>
-          <div>
-            <h4>9/14/2022</h4>
-            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" />
-            <p>Temp: 25°C</p>
-            <p>Wind: 3.94MPH</p>
-            <p>Humidity: 63%</p>
-          </div>
         </div>
       </section>
     </main>
@@ -83,6 +43,7 @@
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

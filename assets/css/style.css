@@ -3,7 +3,7 @@
 }
 
 * {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 3rem;
 }
 h1 {
@@ -71,18 +71,16 @@ main,
   border-radius: 25px;
   margin: 0 2% 2% 2%;
 }
-/* #current-day-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-} */
 
 #current-day {
   margin: 2%;
   text-align: center;
   border: gray solid;
   width: 96%;
+}
+
+#current-day h3 {
+  display: inline-block;
 }
 
 #five-day-forecast {
@@ -103,6 +101,12 @@ main,
   align-content: center;
 }
 
+#five-day-forecast img {
+  height: 80px;
+  width: 80px;
+  align-self: center;
+}
+
 #forecast-title {
   text-align: center;
 }
@@ -112,6 +116,7 @@ main,
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
+  margin: 1%;
 }
 
 #city-search form {
@@ -123,6 +128,7 @@ main,
 
 #city-search h2 {
   text-align: center;
+  margin-bottom: 1%;
 }
 
 @media only screen and (min-width: 996px) {
@@ -132,7 +138,7 @@ main,
   }
 
   #city-search {
-    width: 30%;
+    width: 28%;
   }
 
   #current-day-container {
