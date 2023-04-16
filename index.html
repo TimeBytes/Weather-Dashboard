@@ -9,33 +9,32 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- header -->
     <header>
       <h1>Weather Dashboard</h1>
     </header>
+    <!-- main section -->
     <main>
+      <!-- city search section -->
       <section id="city-search">
         <h2>Search for a City</h2>
         <form>
           <input id="city-input" type="text" placeholder="City Name" />
-          <input id="state-input" type="text" placeholder="State Code" />
-          <input id="country-input" type="text" placeholder="Country Code" />
           <button id="city-search-btn" type="submit">Search</button>
         </form>
+        <p id="error-message"></p>
       </section>
+      <!-- search history section -->
       <section id="search-history-container">
-        <ul id="search-history">
-          <!-- <li>History1</li>
-          <li>History2</li>
-          <li>History3</li> -->
-        </ul>
+        <ul id="search-history"></ul>
       </section>
+      <!-- current day section -->
       <section id="current-day-container">
         <div id="current-day"></div>
       </section>
+      <!-- five day forecast container -->
       <section id="five-day-forecast-container">
-        <div id="five-day-forecast">
-          <h3 id="forecast-title">5-Day Forecast:</h3>
-        </div>
+        <div id="five-day-forecast"></div>
       </section>
     </main>
     <script
@@ -43,6 +42,7 @@
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
+    <!-- day js to convert unix time codes returned by api to preferred format -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>

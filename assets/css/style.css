@@ -1,5 +1,7 @@
+/* css variables */
 :root {
   --card-color: #323d4f;
+  --white: white;
 }
 
 * {
@@ -19,25 +21,20 @@ h4 {
   font-size: 1.5rem;
 }
 
-body,
-html {
-  width: 100%;
-}
-
 body {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
 }
+
 header {
   height: 15%;
 }
 
 header h1 {
-  background-color: blue;
+  background-image: linear-gradient(to right, #465ab8, #261360);
   text-align: center;
   padding: 10px;
+  color: var(--white);
 }
 
 form input {
@@ -49,6 +46,8 @@ main {
   flex-wrap: wrap;
   height: 85%;
 }
+
+/* 100% width */
 #search-history-container,
 #current-day,
 #five-day-forecast,
@@ -56,49 +55,134 @@ main {
 header,
 main,
 #city-search,
-#current-day-container {
+#current-day-container,
+#five-day-forecast div,
+body,
+html {
   width: 100%;
 }
-#search-history-container {
-  order: 2;
+
+/* display flex and wrap */
+body,
+#five-day-forecast,
+#city-search form,
+#city-search,
+#five-day-forecast div {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+/* display column */
+#city-search form,
+#city-search,
+#five-day-forecast div,
 #search-history {
-  text-align: center;
-}
-#search-history li {
-  background-color: aqua;
-  border-radius: 25px;
-  margin: 0 2% 2% 2%;
+  flex-direction: column;
 }
 
-#current-day {
-  margin: 2%;
+#search-history,
+#error-message {
   text-align: center;
-  border: gray solid;
-  width: 96%;
 }
 
-#current-day h3 {
+#current-day h3,
+#search-history div p {
   display: inline-block;
 }
 
-#five-day-forecast {
-  display: flex;
-  flex-wrap: wrap;
+#forecast-title,
+#city-input,
+#current-day,
+#city-search h2 {
+  text-align: center;
+}
+
+#five-day-forecast,
+#five-day-forecast div,
+#city-search {
   align-content: center;
+}
+/* beginning of city search */
+#city-search {
+  margin: 1%;
+  border-bottom: gray solid;
+}
+#city-search h2 {
+  margin-bottom: 1%;
+}
+#city-search form {
+  width: 96%;
+}
+
+#city-input {
+  margin-bottom: 5%;
+  border-radius: 15px;
+}
+
+#city-search-btn {
+  background-color: #5cbaff;
+  color: black;
+  border-radius: 25px;
+  border: none;
+}
+
+#city-search-btn:hover {
+  background-color: #5779bd;
+  color: var(--white);
+}
+
+#error-message {
+  color: red;
+}
+/* end of city search */
+/* beginning of search history container */
+/* changes the order of the search history so that it's after the forecast */
+#search-history-container {
+  order: 2;
+}
+#search-history {
+  display: flex;
+  align-items: center;
+}
+
+#search-history div {
+  background-color: #aeaeae;
+  border-radius: 25px;
+  margin: 0 2% 2% 2%;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 60px;
+  position: relative;
+}
+
+#search-history div:hover {
+  cursor: grab;
+  background-color: #7a7a7a;
+  color: var(--white);
+}
+
+#search-history div p {
+  height: 60px;
+  width: 60px;
+  position: relative;
+  right: -120px;
+  bottom: 60px;
+}
+#search-history div p:hover {
+  color: black;
+}
+/* end of search history container */
+
+#current-day {
+  margin: 2%;
+  width: 96%;
 }
 
 #five-day-forecast div {
   margin: 2%;
   background-color: var(--card-color);
-  color: white;
+  color: var(--white);
   padding: 25px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
 }
 
 #five-day-forecast img {
@@ -107,32 +191,9 @@ main,
   align-self: center;
 }
 
-#forecast-title {
-  text-align: center;
-}
-
-#city-search {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: wrap;
-  margin: 1%;
-}
-
-#city-search form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 96%;
-}
-
-#city-search h2 {
-  text-align: center;
-  margin-bottom: 1%;
-}
-
 @media only screen and (min-width: 996px) {
-  main {
+  main,
+  #five-day-forecast {
     display: flex;
     flex-wrap: wrap;
   }
@@ -149,7 +210,6 @@ main,
     margin: 2%;
     text-align: start;
     padding: 15px;
-    border: gray solid;
     width: 96%;
   }
 
@@ -157,20 +217,19 @@ main,
     text-align: start;
     margin-left: 2%;
   }
+  /* changes the order of the flex box so that the forecast shows up after the search history */
   #five-day-forecast-container {
     order: 3;
     width: 70%;
   }
   #five-day-forecast {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
   }
 
   #five-day-forecast div {
     margin: 0 0 2% 2%;
     background-color: var(--card-color);
-    color: white;
+    color: var(--white);
     padding: 25px;
     width: auto;
   }
