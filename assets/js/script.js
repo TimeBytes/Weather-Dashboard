@@ -47,6 +47,8 @@ $(function () {
     localStorageHistory = JSON.parse(localStorage.getItem("History"));
     if (!localStorageHistory) {
       localStorageHistory = [];
+      //exits this function if there is no localStorageHistory
+      return;
     }
     // calls getCoordinates and passes the last items on the list to display it on the page (most recent search)
     getCoordinates(localStorageHistory[localStorageHistory.length - 1]);
