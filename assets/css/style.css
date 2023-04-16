@@ -105,7 +105,6 @@ body,
 /* beginning of city search */
 #city-search {
   margin: 1%;
-  border-bottom: gray solid;
 }
 #city-search h2 {
   margin-bottom: 1%;
@@ -200,6 +199,7 @@ body,
 
   #city-search {
     width: 28%;
+    border-bottom: gray solid;
   }
 
   #current-day-container {

@@ -96,7 +96,7 @@ function displayError() {
 
 // takes a city name and calls the api which returns an object that contains the latitude and longitude
 function getCoordinates(city) {
-  var urlGeo = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=a28b4bca4758cee1be1ac1e4e61612a1`;
+  var urlGeo = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=a28b4bca4758cee1be1ac1e4e61612a1`;
   $.ajax(urlGeo).done(function (response) {
     // validation to make sure city was found
     if (response.length == 0) {
@@ -119,7 +119,7 @@ function getCoordinates(city) {
 // call the api and returns an object with weather forecast
 // city names returned in this response is not the same name as the city searched but it's in the general coordinates
 function getWeather(coordinates) {
-  var urlForecast = `http://api.openweathermap.org/data/2.5/forecast?lat=${coordinates[0].lat}&lon=${coordinates[0].lon}&units=metric&appid=a28b4bca4758cee1be1ac1e4e61612a1`;
+  var urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates[0].lat}&lon=${coordinates[0].lon}&units=metric&appid=a28b4bca4758cee1be1ac1e4e61612a1`;
   $.ajax(urlForecast).done(function (response) {
     // call fiveDatForecast with parameter of object type
     fiveDayForecast(response);
