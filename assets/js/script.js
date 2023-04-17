@@ -148,11 +148,11 @@ $(function () {
           "https://openweathermap.org/img/wn/" +
           forecastData.weather[0].icon +
           ".png";
-        var tempurate = "Temp: " + mainData.temp + "°C";
+        var temperature = "Temp: " + mainData.temp + "°C";
         var humidity = "Humidity: " + mainData.humidity + "%";
         var windspeed = "Wind: " + windData.speed + "m/s";
         // calls the generateCards function and give 5 parameters
-        generateCards(date, icon, tempurate, humidity, windspeed);
+        generateCards(date, icon, temperature, humidity, windspeed);
       }
     }
   }
@@ -181,7 +181,7 @@ $(function () {
     );
     var forecastDetails = data.list[0];
     currentDayEl.append(
-      $("<p>").text("Tempurate: " + forecastDetails.main.temp + "°C")
+      $("<p>").text("Temperature: " + forecastDetails.main.temp + "°C")
     );
     currentDayEl.append(
       $("<p>").text("Wind: " + forecastDetails.wind.speed + "m/s")
@@ -192,8 +192,8 @@ $(function () {
   }
 
   // displays the forcast details for the next 5 days
-  function generateCards(date, icon, tempurate, humidity, windspeed) {
-    var forecastDetails = [tempurate, windspeed, humidity];
+  function generateCards(date, icon, temperature, humidity, windspeed) {
+    var forecastDetails = [temperature, windspeed, humidity];
     var cardContainer = $("<div>");
 
     fiveDayForecastContainer.append(cardContainer);
